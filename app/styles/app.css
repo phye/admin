@@ -1,0 +1,89 @@
+* {
+    border: 1px solid black;
+}
+
+body {
+    margin: auto;
+    width: 90%;
+}
+
+header {
+    background: #f3f3f3;
+    /* display: inline-block; */
+    padding: 5px 0px 5px 0px;
+}
+
+header .logo {
+    padding: 0px;
+    border: none;
+
+    display: inline-block;
+
+    color: blue;
+    font-size: medium;
+    font-style: italic;
+}
+
+header .menu {
+    margin: 0px 0px 0px 20px;
+    padding: 0px;
+
+    width: 82%;
+    display: inline-block;
+
+    background: #3f3f3f;
+}
+
+header .menu div {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    border: none;
+}
+
+.menu div a {
+    /* display: inline-block; */
+    width: 100%;
+    border: none;
+
+    color: black;
+    font-size: large;
+    text-decoration: none;
+}
+
+.active {
+    background: #4d4;
+}
+
+.menu div a:hover {
+    color: white;
+    background: #f3f3f3;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+nav {
+    margin: auto;
+    width: 15%;
+    float: left;
+}
+
+article {
+    margin: auto;
+    width: 80%;
+    float: left;
+}
+
+#op-panel {
+    height: 20px;
+}
+
+#main {
+    height: 300px;
+}
+
+footer {
+    background: #f3f3f3;
+}
