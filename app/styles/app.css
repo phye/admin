@@ -1,5 +1,5 @@
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 body {
@@ -8,48 +8,68 @@ body {
 }
 
 header {
-    background: #f3f3f3;
-    /* display: inline-block; */
+    width: 100%;
     padding: 5px 0px 5px 0px;
+    text-align: justify;
+
+    margin: auto;
+    background: #f3f3f3;
 }
 
 header .logo {
     padding: 0px;
-    border: none;
+    width: 15%;
 
     display: inline-block;
 
     color: blue;
     font-size: medium;
     font-style: italic;
+    text-align: left;
 }
 
 header .menu {
-    margin: 0px 0px 0px 20px;
     padding: 0px;
-
-    width: 82%;
+    position: relative;
+    width: 80%;
     display: inline-block;
-
-    background: #3f3f3f;
 }
 
+header div {
+    display: inline-block;
+}
+
+header div.right {
+    float: right;
+}
+
+.button {
+    padding: 5px 0px;
+    margin: 5px;
+}
+
+.button a {
+    text-decoration: none;
+}
+.button a:hover {
+    background: #4ef;
+}
+
+/*
 header .menu div {
     display: inline-block;
     width: 100px;
     text-align: center;
-    border: none;
 }
 
 .menu div a {
-    /* display: inline-block; */
     width: 100%;
-    border: none;
 
     color: black;
     font-size: large;
     text-decoration: none;
 }
+
 
 .active {
     background: #4d4;
@@ -59,6 +79,8 @@ header .menu div {
     color: white;
     background: #f3f3f3;
 }
+
+*/
 
 .clearfix {
     overflow: auto;
