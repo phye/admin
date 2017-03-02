@@ -9,17 +9,76 @@
 </header>
 
 <div id="content" class="clearfix">
-  <nav>
+  <section id='op-panel'>
+    <a href="#"><div class="vcenter button">op1</div></a>
+    <a href="#"><div class="vcenter button">op2</div></a>
+    <a href="#"><div class="vcenter button">op3</div></a>
+  </section>
+  <nav class="left">
     <ul>
-      <li><a href="/users">Users</a></li>
-      <li><a href="/goods">Goods</a></li>
-      <li><a href="/orders">Orders</a></li>
+      <li class="link"><a href="/users">User Manage</a></li>
+      <li class="link"><a href="/goods">Good Manage</a></li>
+      <li class="link"><a href="/orders">Order Manage</a></li>
     </ul>
   </nav>
 
-  <article>
-    <section id='op-panel'>Operation Panel</section>
-    <section id='main'>Main Data List</section>
+  <article id="dtable">
+    <table>
+      <tr>
+        <th id="select">Select</th>
+        <th>id</th>
+        <th>name</th>
+        <th>phone</th>
+        <th>role</th>
+        <th>regtime</th>
+        <th>evaluation</th>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="select"></td>
+        <td>123</td>
+        <td>John Smith</td>
+        <td>13344556677</td>
+        <td>admin</td>
+        <td>2017-01-01</td>
+        <td>4.8</td>
+      </tr>
+      <tr class="date">
+        <td><input type="checkbox" name="select"></td>
+        <td>123</td>
+        <td>John Smith</td>
+        <td>13344556677</td>
+        <td>admin</td>
+        <td>2017-01-01</td>
+        <td>4.8</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="select"></td>
+        <td>123</td>
+        <td>John Smith</td>
+        <td>13344556677</td>
+        <td>admin</td>
+        <td>2017-01-01</td>
+        <td>4.8</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="select"></td>
+        <td>123</td>
+        <td>John Smith</td>
+        <td>13344556677</td>
+        <td>admin</td>
+        <td>2017-01-01</td>
+        <td>4.8</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="select"></td>
+        <td>123</td>
+        <td>John Smith</td>
+        <td>13344556677</td>
+        <td>admin</td>
+        <td>2017-01-01</td>
+        <td>4.8</td>
+      </tr>
+    </table>
   </article>
 </div>
 
