@@ -75,7 +75,7 @@
           </div>
 
           <table id="main-table" class="table table-striped" >
-            <th><input type="checkbox" name=""></th>
+            <th><input type="checkbox" v-model="selectAll"></th>
             <th>ID</th>
             <th>Name</th>
             <th>Phone</th>
@@ -83,7 +83,7 @@
             <th>Role</th>
             <th>Status</th>
             <tr v-for="user in users">
-              <td><input type="checkbox" name=""></td>
+              <td><input type="checkbox" v-model="user.selected"></td>
               <td>{{ user.id }}</td>
               <td>{{ user.name }}</td>
               <td>{{ user.phone }}</td>
@@ -115,7 +115,7 @@
       </div>   
       <footer class="footer navbar-fixed-bottom text-right">
         <div class="container">
-          <p class="text-muted">&copy; 2016 Phye, Inc.</p>
+          <p class="text-muted">&copy; 2016 phye, Inc.</p>
         </div>
       </footer>
     </div>
@@ -130,7 +130,8 @@
               phone: '13377881024',
               address: 'No 900., Yishan Rd',
               role: 'User',
-              status: 'active'
+              status: 'active',
+              selected: false
             },
             {
               id: "9",
@@ -138,9 +139,29 @@
               phone: '13377881024',
               address: 'No 900., Yishan Rd',
               role: 'User',
-              status: 'active'
+              status: 'active',
+              selected: true
             }
           ]
+        },
+        computed: {
+          selectAll: {
+            set: function (newValue) {
+              this.users.map(function (user) {
+                user.selected = newValue;
+              })
+            },
+            get: function () {
+              var allSelected = true;
+              for (var i = 0; i < this.users.length; i++) {
+                if (! this.users[i].selected) {
+                  allSelected = false;
+                  break;
+                }
+              }
+              return allSelected;
+            }
+          }
         }
       });
     </script>
