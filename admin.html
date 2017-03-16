@@ -11,6 +11,9 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous">
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/vue-strap/1.1.36/vue-strap.min.js"
+          crossorigin="anonymous">
     <link href="dashboard.css" rel="stylesheet">
     <script src="https://unpkg.com/vue"></script>
   </head>
@@ -71,7 +74,7 @@
             </button>
           </div>
 
-          <table id="main-table" class="table table-striped">
+          <table id="main-table" class="table table-striped" >
             <th><input type="checkbox" name=""></th>
             <th>ID</th>
             <th>Name</th>
@@ -79,41 +82,14 @@
             <th>Address</th>
             <th>Role</th>
             <th>Status</th>
-            <tr>
-              <td><input type="checkbox" name="3"></td>
-              <td>3</td>
-              <td>phye</td>
-              <td>13344556677</td>
-              <td>No.900 Yishang Rd.</td>
-              <td>Admin</td>
-              <td>Active</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="4"></td>
-              <td>4</td>
-              <td>AAA</td>
-              <td>13344556688</td>
-              <td>No.100 Hutai Rd.</td>
-              <td>User</td>
-              <td>Active</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="5"></td>
-              <td>5</td>
-              <td>AAB</td>
-              <td>13344556689</td>
-              <td>No.100 Hutai Rd.</td>
-              <td>User</td>
-              <td>Active</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="6"></td>
-              <td>6</td>
-              <td>DCG</td>
-              <td>13344557688</td>
-              <td>No.100 Hutai Rd.</td>
-              <td>User</td>
-              <td>Active</td>
+            <tr v-for="user in users">
+              <td><input type="checkbox" name=""></td>
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.phone }}</td>
+              <td>{{ user.address }}</td>
+              <td>{{ user.role }}</td>
+              <td>{{ user.status }}</td>
             </tr>
           </table>
           <nav aria-label="Page navigation">
@@ -143,11 +119,30 @@
         </div>
       </footer>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    <script>
+      var mainTable = new Vue({
+        el: '#main-table',
+        data: {
+          users: [
+            {
+              id: "8",
+              name: "vue",
+              phone: '13377881024',
+              address: 'No 900., Yishan Rd',
+              role: 'User',
+              status: 'active'
+            },
+            {
+              id: "9",
+              name: "vue",
+              phone: '13377881024',
+              address: 'No 900., Yishan Rd',
+              role: 'User',
+              status: 'active'
+            }
+          ]
+        }
+      });
+    </script>
   </body>
 </html>
